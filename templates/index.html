@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP3 to Text Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='javascript/javascript.js') }}" defer></script>
+</head>
+<body>
+    <h1>MP3 to Text Converter</h1>
+    <form id="uploadForm" method="POST" action="/upload" enctype="multipart/form-data">
+        <label for="mp3File">Upload your MP3 file:</label>
+        <input type="file" id="mp3File" name="file" accept=".mp3">
+        <button type="submit">Convert</button>
+    </form>
+    <div id="result">
+        <h3>Converted Text:</h3>
+        <p id="output"></p>
+        <button id="downloadButton" style="display: none;">Download Transcription</button>
+    </div>
+</body>
+</html>
